@@ -1,34 +1,34 @@
 {
-    "pedidos": [
+    "solicitations": [
         {
           "cpf": "11111111111",
-          "nome": "Pedido novo azul",
-          "descricao": "Esse é o pedido novo na cor azul",
+          "name": "Pedido novo azul",
+          "description": "Esse é o pedido novo na cor azul",
           "status": 0
         },
         {
           "cpf": "22222222222",
-          "nome": "Pedido em preparação amarelo",
-          "descricao": "Esse é o pedido em preparação na cor amarela",
-          "status": 0
+          "name": "Pedido em preparação amarelo",
+          "description": "Esse é o pedido em preparação na cor amarela",
+          "status": 1
         },
         {
           "cpf": "33333333333",
-          "nome": "Pedido pronto para pagamento verde",
-          "descricao": "Esse é o pedido pronto para pagamento na cor verde",
-          "status": 0
+          "name": "Pedido pronto para pagamento verde",
+          "description": "Esse é o pedido pronto para pagamento na cor verde",
+          "status": 2
         },
         {
           "cpf": "44444444444",
-          "nome": "Pedido concluído cinza",
-          "descricao": "Esse é o pedido concluído na cor cinza",
-          "status": 0
+          "name": "Pedido concluído cinza",
+          "description": "Esse é o pedido concluído na cor cinza",
+          "status": 3
         },
         {
           "cpf": "55555555555",
-          "nome": "Pedido excluído",
-          "descricao": "Esse é o pedido excluído sem cor",
-          "status": 0
+          "name": "Pedido excluído",
+          "description": "Esse é o pedido excluído sem cor",
+          "status": 4
         }
     ]
   }
