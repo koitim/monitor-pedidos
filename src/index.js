@@ -2,19 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import configureStore from './store/configureStore';
-import { loadSolicitations } from './actions/solicitationActions'
+import { BrowserRouter as Router } from 'react-router-dom';
+import configureStore from './store/ConfigureStore';
+import { Provider } from 'react-redux';
+import { loadOrders } from './actions/OrderActions'
 
 import * as serviceWorker from './serviceWorker';
 
 const store = configureStore();
-store.dispatch(loadSolicitations());
+store.dispatch(loadOrders());
 
 ReactDOM.render(
     <Provider store={store}>
         <Router><App/></Router>
     </Provider>,
-    decument.getElementById('root')
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

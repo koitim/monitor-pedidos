@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import solicitations from './solicitationReducer';
+import orders from './OrderReducer';
 import { reducer as formReducer } from "redux-form";
 import { reducer as toastrReducer } from "react-redux-toastr";
 
 const rootReducer = combineReducers({
-    solicitations, form: formReducer,
+    orders, form: formReducer,
     toastr: toastrReducer
 });
 
