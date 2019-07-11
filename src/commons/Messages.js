@@ -7,7 +7,7 @@ export default props => (
         timeOut={3000}
         newestOnTop={true}
         preventDuplicates={true}
-        position='top-right'
+        position='bottom-center'
         transitionIn='fadeIn'
         transitionOut='fadeOut'
         progressBar />

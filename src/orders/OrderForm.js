@@ -8,6 +8,7 @@ const OrderForm = (props) => {
             <Field name='name' component='input' placeholder='Nome'/>
             <Field name='cpf' component='input' placeholder='CPF'/>
             <Field name='description' component='input' placeholder='Descrição do peddo'/>
+            <br/>
             <input type="submit"/>
         </form>
     )

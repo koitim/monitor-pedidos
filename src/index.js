@@ -5,7 +5,7 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import configureStore from './store/ConfigureStore';
 import { Provider } from 'react-redux';
-import { loadOrders } from './actions/OrderActions'
+import { loadOrders } from './commons/Service'
 
 import * as serviceWorker from './serviceWorker';
 
