@@ -7,6 +7,7 @@ import Messages from "./commons/Messages";
 import OrderList from "./orders/OrderList";
 import ManageOrder from "./orders/ManageOrder";
 import SumaryOrders from "./orders/SumaryOrders";
+import 'materialize-css/dist/css/materialize.min.css';
 
 class App extends React.Component {
   render() {

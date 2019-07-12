@@ -27,3 +27,15 @@ export function deleteOrderSuccess(order) {
 export function nextStepOrderSuccess(order) {
     return { type: types.NEXT_STEP_ORDER_SUCCESS, order }
 }
+
+export function activateIconOrders() {
+    return { type: types.ACTIVATE_ICON_ORDERS }
+}
+
+export function activateIconSumary() {
+    return { type: types.ACTIVATE_ICON_SUMARY }
+}
+
+export function activateIconNew() {
+    return { type: types.ACTIVATE_ICON_NEW }
+}

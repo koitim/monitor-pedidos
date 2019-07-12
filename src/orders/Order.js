@@ -21,61 +21,45 @@ class Order extends React.Component {
         });
     };
 
-    _handleDelete = (e) => {
-        e.preventDefault();
-        this.props.onDelete(this.props.order.cpf);
-    };
-
-    _showOrder = (expandOrder, order) => {
-        if (expandOrder) {
-            return (
-                <div>
-                    <p>{order.description}</p>
-                    {this._showLinkNext(order)}
-                    {this._showLinkDelete(order)}
-                </div>
-            )
+    _showLinkDelete(expandOrder, order) {
+        if (order.status !== EXCLUDED && expandOrder) {
+            return (<Link to='/' className='btn red'
+                onClick={() => this.props.deleteOrder(order)}><i className="material-icons">delete</i></Link>)
         }
     }
 
-    _showLinkDelete(order) {
-        if (order.status !== EXCLUDED) {
-            return (<p><Link to='/' className='btn'
-                onClick={() => this.props.deleteOrder(order)}>Excluir</Link></p>)
-        }
-    }
-
-    _showLinkNext(order) {
-        if (order.status !== COMPLETED) {
-            return (<p><Link to='/' className='btn'
-                onClick={() => this.props.nextStepOfTheOrder(order)}>Próximo</Link></p>)
+    _showLinkNext(expandOrder, order) {
+        if (order.status !== COMPLETED && expandOrder) {
+            return (<Link to='/' className='btn blue'
+                onClick={() => this.props.nextStepOfTheOrder(order)}><i className="material-icons">forward</i></Link>)
         }
     }
 
     render() {
         let order = this.props.order;
-        let textoBotao = "Exibir Pedido";
         let expandOrder = this.state.expandOrder;
+        let description = "";
         if (expandOrder) {
-            textoBotao = "Ocultar Pedido";
+            description = order.description;
         }
         return (
             <div className="row">
-                <div className="col s12 m12">
-                    <div className="card indigo darken-3">
-                        <br />
-                        <div className="card-content white-text">
-                            <p>Cor: {COLOR_ORDERS[order.status]}</p>
-                            <span className="card-title">{order.name}</span>
-                            {this._showOrder(expandOrder, order)}
-                        </div>
-                        <div className="card-action">
-                            <a className="right" href="#" onClick={this._handleClick}>{textoBotao}</a>
-                            <br />
+                <div className="col s12 m6">
+                    <div className="card">
+                        <div className="card-content">
+                            <a className="white-text" href="#" onClick={this._handleClick}>
+                                <span className={"card-title " + COLOR_ORDERS[order.status]}>
+                                    {order.name}
+                                </span>
+                            </a>
+                            <p>{description}</p>
+                            {this._showLinkNext(expandOrder, order)}
+                            {this._showLinkDelete(expandOrder, order)}
                         </div>
                     </div>
                 </div>
-            </div>);
+            </div>
+        )
     }
 }
 

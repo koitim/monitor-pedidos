@@ -11,12 +11,16 @@ class SumaryOrders extends React.Component {
     }
 
     render() {
+        const totalNew = this.props.sumary[NEW]
+        const totalPreparing = this.props.sumary[PREPARING]
+        const totalReady = this.props.sumary[READY_FOR_PAYMENT]
+        const totalCompleted = this.props.sumary[COMPLETED]
         return (
-            <div className="section no-pad-bot" id="index-banner">
-                <p>Novo - {this.props.sumary[NEW]}</p>
-                <p>Em preparação - {this.props.sumary[PREPARING]}</p>
-                <p>Prontos para pagamento - {this.props.sumary[READY_FOR_PAYMENT]}</p>
-                <p>Concluídos - {this.props.sumary[COMPLETED]}</p>
+            <div className="collection">
+                <p className="collection-item"><span className="badge">{totalNew}</span>Novo</p>
+                <p className="collection-item"><span className="badge">{totalPreparing}</span>Em preparação</p>
+                <p className="collection-item"><span className="badge">{totalReady}</span>Prontos para pagamento</p>
+                <p className="collection-item"><span className="badge">{totalCompleted}</span>Concluídos</p>
             </div>);
     }
 

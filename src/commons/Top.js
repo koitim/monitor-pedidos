@@ -5,10 +5,9 @@ class Top extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.title}
-                <br /><br />
-            </div>
+            <header className="indigo white-text">
+                <h5>{this.props.title}</h5>
+            </header>
         )
     }
 }

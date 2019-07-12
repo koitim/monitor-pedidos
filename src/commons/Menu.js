@@ -7,23 +7,28 @@ import { connect } from 'react-redux';
 class Menu extends React.Component {
 
     render() {
+        const { newOrder, iconOrders, iconSumary, iconNew } = this.props;
         return (
-            <nav className="indigo darken-4" role="navigation">
-                <div className="nav-wrapper container">
-                    <br /><br />
-                    <p><Link to='/' className='btn'>Acompanhar</Link></p>
-                    <p><Link to='/sumary' className='btn'>Resumo</Link></p>
-                    <p><Link to='/order' className='btn'
-                        onClick={() => this.props.newOrder()}>Novo</Link></p>
-                </div>
-            </nav>
+            <ul className="tabs tabs-fixed-width blue">
+                <li className="tab">
+                    <Link to='/' className={iconOrders}><i className="material-icons">assignment</i></Link>
+                </li>
+                <li className="tab">
+                    <Link to='/sumary' className={iconSumary}><i className="material-icons">assessment</i></Link>
+                </li>
+                <li className="tab">
+                    <Link to='/order' className={iconNew} onClick={() => newOrder()}><i className="material-icons">add</i></Link>
+                </li>
+            </ul>
         )
     }
 }
 
 function mapStateToProps(state) {
     return {
-        orders: state.orders.list
+        iconOrders: "btn-flat " + state.orders.iconOrders,
+        iconSumary: "btn-flat " + state.orders.iconSumary,
+        iconNew: "btn-flat " + state.orders.iconNew
     };
 }
 

@@ -5,7 +5,7 @@
       "cpf": "11111111111",
       "name": "Pedido novo azul",
       "description": "Esse é o pedido novo na cor azul",
-      "status": 1
+      "status": 4
     },
     {
       "id": 2,
@@ -34,6 +34,20 @@
       "name": "Pedido excluído",
       "description": "Esse é o pedido excluído sem cor",
       "status": 4
+    },
+    {
+      "name": "sdfgfsdg",
+      "cpf": "dfgdfg",
+      "description": "dgdfgd",
+      "status": 1,
+      "id": "dfgdfg-sdfgfsdg"
+    },
+    {
+      "name": "8908908",
+      "cpf": "6867",
+      "description": "534354",
+      "status": 0,
+      "id": "6867-8908908"
     }
   ]
 }

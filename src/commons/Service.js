@@ -54,6 +54,7 @@ export function loadOrders() {
         Axios.get(URL)
             .then(orders => {
                 dispatch(actions.changeTitle(TRACK))
+                dispatch(actions.activateIconOrders())
                 dispatch(actions.loadOrdersSuccess(orders.data));
             });
     };
@@ -62,6 +63,7 @@ export function loadOrders() {
 export function newOrder() {
     return dispatch => {
         dispatch(actions.changeTitle(NEW_ORDER))
+        dispatch(actions.activateIconNew())
         dispatch(actions.manageOrder(false));
     };
 }
@@ -77,6 +79,7 @@ export function loadSumaryOrders() {
                     });
                 }
                 dispatch(actions.changeTitle(ALL))
+                dispatch(actions.activateIconSumary())
                 dispatch(actions.loadSumaryOrdersSuccess(sumaryOrders));
             });
     };

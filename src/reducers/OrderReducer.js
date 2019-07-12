@@ -6,7 +6,10 @@ const INITIAL_STATE = {
     list: [],
     sumary: [],
     redirect: false,
-    order: {}
+    order: {},
+    iconOrders: "",
+    iconSumary: "",
+    iconNew: ""
 }
 
 export default function OrderReducer(state = INITIAL_STATE, action) {
@@ -33,6 +36,12 @@ export default function OrderReducer(state = INITIAL_STATE, action) {
             return { ...state, sumary: action.sumary };
         case types.CHANGE_TITLE:
             return { ...state, currentScreen: action.title }
+        case types.ACTIVATE_ICON_ORDERS:
+            return { ...state, iconOrders: 'active', iconSumary: '', iconNew: '' }
+        case types.ACTIVATE_ICON_SUMARY:
+            return { ...state, iconOrders: '', iconSumary: 'active', iconNew: '' }
+        case types.ACTIVATE_ICON_NEW:
+            return { ...state, iconOrders: '', iconSumary: '', iconNew: 'active' }
         default:
             return state;
     }
