@@ -26,10 +26,6 @@ export default function OrderReducer(state = INITIAL_STATE, action) {
                 });
             }
             return { ...state, list: activeOrders };
-        case types.DELETE_ORDER_SUCCESS:
-            return { ...state };
-        case types.NEXT_STEP_ORDER_SUCCESS:
-            return { ...state };
         case types.MANAGE_ORDER:
             return { ...state, redirect: action.redirect };
         case types.LOAD_SUMARY_ORDERS_SUCCESS:

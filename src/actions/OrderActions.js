@@ -20,14 +20,6 @@ export function changeTitle(title) {
     return { type: types.CHANGE_TITLE, title }
 }
 
-export function deleteOrderSuccess(order) {
-    return { type: types.DELETE_ORDER_SUCCESS, order }
-}
-
-export function nextStepOrderSuccess(order) {
-    return { type: types.NEXT_STEP_ORDER_SUCCESS, order }
-}
-
 export function activateIconOrders() {
     return { type: types.ACTIVATE_ICON_ORDERS }
 }

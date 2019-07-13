@@ -12,7 +12,7 @@
       "cpf": "22222222222",
       "name": "Pedido em preparação amarelo",
       "description": "Esse é o pedido em preparação na cor amarela",
-      "status": 1
+      "status": 4
     },
     {
       "id": 3,
@@ -39,14 +39,14 @@
       "name": "sdfgfsdg",
       "cpf": "dfgdfg",
       "description": "dgdfgd",
-      "status": 1,
+      "status": 2,
       "id": "dfgdfg-sdfgfsdg"
     },
     {
       "name": "8908908",
       "cpf": "6867",
       "description": "534354",
-      "status": 0,
+      "status": 3,
       "id": "6867-8908908"
     }
   ]

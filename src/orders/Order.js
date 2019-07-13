@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { deleteOrder, nextStepOfTheOrder } from "../commons/Service";
 import { bindActionCreators } from "redux";
-import { Link } from "react-router-dom";
+import { Link as div } from "react-router-dom";
 import { EXCLUDED, COMPLETED, COLOR_ORDERS } from "../commons/Constants";
 
 class Order extends React.Component {
@@ -23,15 +23,15 @@ class Order extends React.Component {
 
     _showLinkDelete(expandOrder, order) {
         if (order.status !== EXCLUDED && expandOrder) {
-            return (<Link to='/' className='btn red'
-                onClick={() => this.props.deleteOrder(order)}><i className="material-icons">delete</i></Link>)
+            return (<div className='btn red'
+                onClick={() => this.props.deleteOrder(order)}><i className="material-icons">delete</i></div>)
         }
     }
 
     _showLinkNext(expandOrder, order) {
         if (order.status !== COMPLETED && expandOrder) {
-            return (<Link to='/' className='btn blue'
-                onClick={() => this.props.nextStepOfTheOrder(order)}><i className="material-icons">forward</i></Link>)
+            return (<div to='/' className='btn blue'
+                onClick={() => this.props.nextStepOfTheOrder(order)}><i className="material-icons">forward</i></div>)
         }
     }
 

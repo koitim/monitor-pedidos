@@ -31,7 +31,7 @@ export function deleteOrder(order) {
         Axios[method](`${URL}/${id}`, order)
             .then(request => {
                 toastr.success('Exclusão realizada com sucesso')
-                dispatch(actions.deleteOrderSuccess(request.data))
+                dispatch(loadOrders())
             })
     }
 }
@@ -44,7 +44,7 @@ export function nextStepOfTheOrder(order) {
         Axios[method](`${URL}/${id}`, order)
             .then(request => {
                 toastr.success('Operação realizada com sucesso')
-                dispatch(actions.nextStepOrderSuccess(request.data))
+                dispatch(loadOrders())
             })
     }
 }
